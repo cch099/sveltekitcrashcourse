@@ -2,8 +2,6 @@
     import {pokemon} from '../stores/pokestore';
     import PokemanCard from '../components/pokemanCard.svelte';
     import Spinner from '../Spinner.svelte';
-    import { flip } from 'svelte/animate';
-
 
     let searchTerm = "";
     let filteredPokemon = [];
@@ -30,11 +28,6 @@
             <div animate:flip={{ duration: 500 }}>
                 <PokemanCard pokeman={pokeman} />
             </div>
-        {:else}
-        <img
-            alt="snap"
-            src="https://i.insider.com/5ae3327e19ee8657008b45f6?width=750&format=jpeg&auto=webp"
-        />
         {/each}
     {:else}
     <article>
